@@ -9,16 +9,9 @@ Source0:	http://ftp.gnu.org/gnu/guile-opengl/%{name}-%{version}.tar.gz
 # Source0-md5:	a5d20170103514a042bb13d28f586472
 Patch0:		%{name}-info.patch
 URL:		http://www.gnu.org/software/guile-opengl/
-BuildRequires:	autoconf >= 2.60
-BuildRequires:	automake
 BuildRequires:	guile-devel >= 5:2.0
-BuildRequires:	libtool >= 2:2
-BuildRequires:	pkgconfig
 BuildRequires:	texinfo
-BuildRequires:	tar >= 1:1.22
-BuildRequires:	xz
-Requires(post,postun):	/sbin/ldconfig
-Requires:	guile >= 5:2.0.11
+Requires:	guile >= 5:2.0
 %ifarch %{x8664} ppc64 s390x sparc64
 Requires:	libGL.so.1()(64-bit)
 Suggests:	libGLU.so.1()(64-bit)
@@ -41,10 +34,6 @@ GNU Guile-OpenGL to interfejs OpenGL dla GNU Guile.
 %patch0 -p1
 
 %build
-%{__libtoolize}
-%{__aclocal} -I m4
-%{__autoconf}
-%{__automake}
 %configure \
 	--disable-silent-rules
 
