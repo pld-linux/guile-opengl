@@ -1,0 +1,22 @@
+--- guile-opengl-0.1.0/doc/guile-opengl.texi.orig	2014-03-23 15:18:15.000000000 +0100
++++ guile-opengl-0.1.0/doc/guile-opengl.texi	2016-10-26 15:40:07.283997911 +0200
+@@ -34,13 +34,13 @@
+ prefixed with a specific copyright header.
+ @end copying
+ 
+-@dircategory The Algorithmic Language Scheme
++@dircategory The Algorithmic Language Scheme:
+ @direntry 
+-* opengl: (guile-opengl).              OpenGL for Guile.
+-* gl: (guile-opengl)GL.                A Scheme interface to the OpenGL API.
+-* glx: (guile-opengl)GLX.              Using OpenGL with the X Window System.
+-* glu: (guile-opengl)GLU.              The GL Utility library.
+-* glut: (guile-opengl)GLUT.            The GL Utility Toolkit.
++* opengl: (guile-opengl).		OpenGL for Guile
++* gl: (guile-opengl)GL.			A Scheme interface to the OpenGL API
++* glx: (guile-opengl)GLX.		Using OpenGL with the X Window System
++* glu: (guile-opengl)GLU.		The GL Utility library
++* glut: (guile-opengl)GLUT.		The GL Utility Toolkit
+ @end direntry
+ 
+ @titlepage 
