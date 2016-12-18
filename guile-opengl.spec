@@ -13,9 +13,11 @@ BuildRequires:	guile-devel >= 5:2.0
 BuildRequires:	rpmbuild(macros) >= 1.721
 BuildRequires:	texinfo
 Requires:	guile >= 5:2.0
+%if 0%{?_soname_prov:1}
 Requires:	%{_soname_prov libGL.so.1}
 Suggests:	%{_soname_prov libGLU.so.1}
 Suggests:	%{_soname_prov libglut.so.3}
+%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
