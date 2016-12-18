@@ -10,17 +10,12 @@ Source0:	http://ftp.gnu.org/gnu/guile-opengl/%{name}-%{version}.tar.gz
 Patch0:		%{name}-info.patch
 URL:		http://www.gnu.org/software/guile-opengl/
 BuildRequires:	guile-devel >= 5:2.0
+BuildRequires:	rpmbuild(macros) >= 1.721
 BuildRequires:	texinfo
 Requires:	guile >= 5:2.0
-%ifarch %{x8664} ppc64 s390x sparc64
-Requires:	libGL.so.1()(64-bit)
-Suggests:	libGLU.so.1()(64-bit)
-Suggests:	libglut.so.3()(64-bit)
-%else
-Requires:	libGL.so.1
-Suggests:	libGLU.so.1
-Suggests:	libglut.so.3
-%endif
+Requires:	%{_soname_prov libGL.so.1}
+Suggests:	%{_soname_prov libGLU.so.1}
+Suggests:	%{_soname_prov libglut.so.3}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
