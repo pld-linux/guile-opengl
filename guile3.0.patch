@@ -1,0 +1,11 @@
+--- guile-opengl-0.1.0/configure.ac~	2014-03-23 15:33:38.000000000 +0100
++++ guile-opengl-0.1.0/configure.ac	2022-03-12 14:16:32.352844220 +0100
+@@ -27,7 +27,7 @@
+ AM_INIT_AUTOMAKE([color-tests -Wall -Wno-portability serial-tests])
+ AM_SILENT_RULES([yes])
+ 
+-GUILE_PKG([2.2 2.0])
++GUILE_PKG([3.0 2.2 2.0])
+ GUILE_PROGS
+ 
+ AC_CONFIG_FILES([Makefile gl/config.scm])
