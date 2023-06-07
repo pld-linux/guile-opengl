@@ -1,15 +1,16 @@
 Summary:	Guile-OpenGL - OpenGL interface for GNU Guile
 Summary(pl.UTF-8):	Guile-OpenGL - interfejs OpenGL dla GNU Guile
 Name:		guile-opengl
-Version:	0.1.0
-Release:	3
+Version:	0.2.0
+Release:	1
 License:	LGPL v3+
 Group:		Libraries
-Source0:	http://ftp.gnu.org/gnu/guile-opengl/%{name}-%{version}.tar.gz
-# Source0-md5:	a5d20170103514a042bb13d28f586472
+Source0:	https://ftp.gnu.org/gnu/guile-opengl/%{name}-%{version}.tar.gz
+# Source0-md5:	67c73b8a23fa0be23e8497e6259c794b
 Patch0:		%{name}-info.patch
-Patch1:		guile3.0.patch
 URL:		http://www.gnu.org/software/guile-opengl/
+BuildRequires:	autoconf >= 2.50
+BuildRequires:	automake >= 1:1.11
 BuildRequires:	guile-devel >= 5:2.0
 BuildRequires:	rpmbuild(macros) >= 1.721
 BuildRequires:	texinfo
@@ -32,7 +33,6 @@ GNU Guile-OpenGL to interfejs OpenGL dla GNU Guile.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 %{__aclocal}
@@ -61,14 +61,14 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS LICENSE NEWS README TODO
-%{_libdir}/guile/*.*/ccache/gl
-%{_libdir}/guile/*.*/ccache/glu
-%{_libdir}/guile/*.*/ccache/glut
-%{_libdir}/guile/*.*/ccache/glx
-%{_libdir}/guile/*.*/ccache/gl.go
-%{_libdir}/guile/*.*/ccache/glu.go
-%{_libdir}/guile/*.*/ccache/glut.go
-%{_libdir}/guile/*.*/ccache/glx.go
+%{_libdir}/guile/*.*/site-ccache/gl
+%{_libdir}/guile/*.*/site-ccache/glu
+%{_libdir}/guile/*.*/site-ccache/glut
+%{_libdir}/guile/*.*/site-ccache/glx
+%{_libdir}/guile/*.*/site-ccache/gl.go
+%{_libdir}/guile/*.*/site-ccache/glu.go
+%{_libdir}/guile/*.*/site-ccache/glut.go
+%{_libdir}/guile/*.*/site-ccache/glx.go
 %{_datadir}/guile/site/*.*/gl
 %{_datadir}/guile/site/*.*/glu
 %{_datadir}/guile/site/*.*/glut
