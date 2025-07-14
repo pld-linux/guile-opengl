@@ -32,7 +32,7 @@ GNU Guile-OpenGL to interfejs OpenGL dla GNU Guile.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__aclocal}
